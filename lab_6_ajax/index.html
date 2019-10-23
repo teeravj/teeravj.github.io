@@ -39,7 +39,7 @@
           return list;
         })
 
-        .then(names => document.querySelector(".content").innerText = "<ol>" + 
+        .then(names => document.querySelector(".content").innerHTML = "<ol>" + 
         "<li>" + names[0] + "</li>" + "<li>" + names[1] + "</li>" 
         + "<li>" + names[2] + "</li>"
         + "<li>" + names[3] + "</li>"
@@ -54,7 +54,7 @@
         + "<li>" + names[12] + "</li>"
         + "<li>" + names[13] + "</li>"
         + "<li>" + names[14] + "</li>"
-        + "<li>" + names[15] + "</li>" + "</ol>");
+        + "</ol>");
     }
 
   </script>
