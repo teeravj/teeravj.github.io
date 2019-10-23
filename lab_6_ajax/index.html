@@ -39,7 +39,7 @@
           return list;
         })
 
-        .then(names => document.querySelector(".content").innerHTML = "<ol>" + 
+        .then(names => document.getElementByClassName("content")[0].innerHTML = "<ol>" + 
         "<li>" + names[0] + "</li>" + "<li>" + names[1] + "</li>" 
         + "<li>" + names[2] + "</li>"
         + "<li>" + names[3] + "</li>"
