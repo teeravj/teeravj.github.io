@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Test AJAX page</title>
+  <link rel="stylesheet" type="text/css" href="./lab_styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="header">UMD Bus Routes</div>
+      <button class="button" onclick="loadData()">Load Some JSON</button>
+      <div class="content"></div>
+      <div class="footer"></div>
+    </div>
+  </div>
+  <script>
+    function loadData() {
+      fetch('https://api.umd.io/v0/bus/routes')
+        .then(res => res.json())
+        .then(res => res.map(c => [c.route_id, c.title]))
+        .then(res => {
+          return res;
+        })
+        .then(busRouteTitle => {
+          document.querySelector(".header").innerHTML = '<div class="header">UMD Bus Route ' + busRouteTitle[6][0] + ', ' + busRouteTitle[6][1] + "</div>";
+          return busRouteTitle;})
+        .then(data => document.querySelector(".content").innerHTML = '<ul>'
+        + '<li>' + data[0][0] + ', ' + data[0][1] + "</li>"
+        + '<li>' + data[1][0] + ', ' + data[1][1] + "</li>"
+        + '<li>' + data[2][0] + ', ' + data[2][1] + "</li>"
+        + '<li>' + data[3][0] + ', ' + data[3][1] + "</li>"
+        + '<li>' + data[4][0] + ', ' + data[4][1] + "</li>"
+        + '<li>' + data[5][0] + ', ' + data[5][1] + "</li>"
+        + '<li>' + data[6][0] + ', ' + data[6][1] + "</li>"
+        + '<li>' + data[7][0] + ', ' + data[7][1] + "</li>"
+        + '<li>' + data[8][0] + ', ' + data[8][1] + "</li>"
+        + '<li>' + data[9][0] + ', ' + data[9][1] + "</li>"
+        + '<li>' + data[10][0] + ', ' + data[10][1] + "</li>"
+        + '<li>' + data[11][0] + ', ' + data[11][1] + "</li>"
+        + '<li>' + data[12][0] + ', ' + data[12][1] + "</li>"
+        + '<li>' + data[13][0] + ', ' + data[13][1] + "</li>"
+        + '<li>' + data[14][0] + ', ' + data[14][1] + "</li>"
+        + '<li>' + data[15][0] + ', ' + data[15][1] + "</li>"
+        + '<li>' + data[16][0] + ', ' + data[16][1] + "</li>"
+        + '<li>' + data[17][0] + ', ' + data[17][1] + "</li>"
+        + '<li>' + data[18][0] + ', ' + data[18][1] + "</li>"
+        + '<li>' + data[19][0] + ', ' + data[19][1] + "</li>"
+        + '<li>' + data[20][0] + ', ' + data[20][1] + "</li>"
+        + '<li>' + data[21][0] + ', ' + data[21][1] + "</li>"
+        + '<li>' + data[22][0] + ', ' + data[22][1] + "</li>"
+        + '<li>' + data[23][0] + ', ' + data[23][1] + "</li>"
+        + '<li>' + data[24][0] + ', ' + data[24][1] + "</li>"
+        + "</ul>");
+
+    }
+  </script>
+</body>
+
+</html>
