@@ -24,7 +24,8 @@
           return res;
         })
         .then(busRouteTitle => {
-          document.querySelector(".header").innerHTML = '<div class="header">UMD Bus Route ' + busRouteTitle[6][0] + ', ' + busRouteTitle[6][1] + "</div>";
+          document.querySelector(".header").innerHTML = 'UMD Bus Route ' + busRouteTitle[6][0] 
+          + ', ' + busRouteTitle[6][1];
           return busRouteTitle;})
         .then(data => {
           let str = "<ul>";
