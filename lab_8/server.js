@@ -48,7 +48,7 @@ app.get('/api', (req, res) => {
     .then((data) => {
         const filteredList = data.filter(list => list.course_id.includes("INST"));
         console.log(filteredList);
-        const formatList = filteredList.map(c => c.course_id + ":" + c.name);
+        const formatList = filteredList.map(c => c.course_id + ": " + c.name);
         console.log(formatList);
         res.send(formatList);
     })
