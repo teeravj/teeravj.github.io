@@ -24,7 +24,6 @@
           console.log(res); // logging step to check what we got
           return res;
         })
-        .then(res => res.map(c => c.course_id))
         .then(data => {
           console.log(data);
           let str = "<ol>";
